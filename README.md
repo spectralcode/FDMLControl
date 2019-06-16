@@ -43,8 +43,7 @@ Contributors
 --------------------
 
 Alexander Heisterkamp - Institute of Quantum Optics, Leibniz University Hannover
-
-Tammo Ripken-  Industrial and Biomedical Optics Department, Laser Zentrum Hannover e.V.
+Tammo Ripken -  Industrial and Biomedical Optics Department, Laser Zentrum Hannover e.V.
 
 
 ## License
