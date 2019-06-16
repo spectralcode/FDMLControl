@@ -5,7 +5,7 @@ FDMLControl enables the control of the [Optores](https://www.optores.com/) FDML 
 <!-- this is a
 comment - with hyphen -->
 
-![screenshot](images/FDMLConrol_screenshotWin10.PNG)
+![screenshot](images/FDMLConrol_screenshotWin10.png)
 
 Features
 --------
