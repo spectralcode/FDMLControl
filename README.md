@@ -20,7 +20,7 @@ The expert mode enables access to more advanced features such as a custom comman
 Admin privileges can be obtained by placing a file with the corresponding key in the same folder as the executable. This makes it possible to change laser parameters which otherwise could not be accessed. FDMLControl obtaines admin privileges automatically if "key.dat" is found in the same folder as the executable during start up. Please contact [Optores](https://www.optores.com/) if you need the admin key for your laser. 
 
 * **Cross platform** </br>
-FDMLControl runs on Windows and Linux (Probably also on Mac, but this has not been tested yet.)
+FDMLControl runs on Windows and Linux. (Probably also on Mac, but this has not been tested yet.)
 
 
 Download and Installation
