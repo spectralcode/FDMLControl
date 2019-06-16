@@ -5,7 +5,10 @@ FDMLControl enables the control of the [Optores](https://www.optores.com/) FDML 
 <!-- this is a
 comment - with hyphen -->
 
-![screenshot](images/FDMLConrol_screenshotWin10.png)
+<p align="center">
+  <img src="images/FDMLConrol_screenshotWin10.png">
+</p>
+
 
 Features
 --------
@@ -42,7 +45,6 @@ Alexander Heisterkamp - Institute of Quantum Optics, Leibniz University Hannover
 Germany
 Tammo Ripken-  Industrial and Biomedical Optics Department, Laser Zentrum Hannover e.V., Hollerithallee 8,
 30419 Hannover, Germany
-
 
 
 ## License
