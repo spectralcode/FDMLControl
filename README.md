@@ -23,7 +23,7 @@ Admin privileges can be obtained by placing a file with the corresponding key in
 FDMLControl runs on Windows and Linux (Probably also on Mac, but this has not been tested yet.)
 
 
-Installing
+Download and Installation
 ----------
 
 A precompiled package for Windows (64bit) can be downloaded from:
