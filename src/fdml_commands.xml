@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+	<IntValueElements>
+		<IntValueElement command="scpll.cps" minValue="0" maxValue="20000" defaultValue="1664" stepSize="1" expertMode="0" infoText="Adjusts the frequency of the Clock Out port on the back panel. Use this output as external clock source for your data acquisition solution. The set value corresponds to half clock cycles per sweep."/>
+		<IntValueElement command="xyout.tri.amp 0" minValue="-1000" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="1" infoText="Controls the analog triangle amplitude of Channel 0. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
+		<IntValueElement command="xyout.tri.off 0" minValue="-2000000" maxValue="2000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 0."/>
+		<IntValueElement command="xyout.tri.pha 0" minValue="-2000000" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 0."/>
+		<IntValueElement command="xyout.tri.rise 0" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 0"/>
+		<IntValueElement command="xyout.tri.fall 0" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 0"/>
+		<IntValueElement command="xyout.tri.sync_out_phase 0" minValue="0" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 0."/>
+		<IntValueElement command="xyout.step.rep 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times. (Channel 0)"/>
+		<IntValueElement command="xyout.sine.amp 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 0."/>
+		<IntValueElement command="xyout.sine.off 0" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 0."/>
+		<IntValueElement command="xyout.sine.pha 0" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 0."/>
+		<IntValueElement command="xyout.sine.length 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 0."/>
+		<IntValueElement command="xyout.sine.sync_out_phase 0" minValue="0" maxValue="20000" defaultValue="1" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 0."/>
+		<IntValueElement command="xyout.tri.amp 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle amplitude of Channel 1. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
+		<IntValueElement command="xyout.tri.off 1" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 1."/>
+		<IntValueElement command="xyout.tri.pha 1" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 1."/>
+		<IntValueElement command="xyout.tri.rise 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 1"/>
+		<IntValueElement command="xyout.tri.fall 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 1"/>
+		<IntValueElement command="xyout.tri.sync_out_phase 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 1."/>
+		<IntValueElement command="xyout.step.rep 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times (Channel 1)"/>
+		<IntValueElement command="xyout.sine.amp 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 1."/>
+		<IntValueElement command="xyout.sine.off 1" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 1."/>
+		<IntValueElement command="xyout.sine.pha 1" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 1."/>
+		<IntValueElement command="xyout.sine.length 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 1."/>
+		<IntValueElement command="xyout.sine.sync_out_phase 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 1."/>
+		<IntValueElement command="rg.div.fdiv" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
+		<IntValueElement command="rg.div.pha" minValue="0" maxValue="20000" defaultValue="0" stepSize="11" expertMode="1" infoText="..."/>
+		<IntValueElement command="rg.div.prediv" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.pha 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.duty 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.mulpow2 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.pha 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.duty 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.mulpow2 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="ldc.low 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="0" infoText="..."/>
+		<IntValueElement command="ldc.high 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1000" expertMode="0" infoText="Sets the SOA current."/>
+		<IntValueElement command="ldc.duty 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the duty cycle of the SOA"/>
+		<IntValueElement command="ldc.pha 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the SOA phase."/>
+		<IntValueElement command="ldc.mulpow2 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="reg.flt.freq" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser frequency in Hz. Do not change this frequency manually, it is controlled by the FDML frequency regulator. Perform a frequency scan (Do Freq Scan) if necessary"/>
+		<IntValueElement command="reg.flt.cr.center" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser center wavelength in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
+		<IntValueElement command="reg.flt.cr.range" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser sweep range in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
+		<IntValueElement command="flt.wfm.amp" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="flt.hvoff" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+	</IntValueElements>
+	
+	<Buttons>
+		<Button name="Laser Enable" command="sys.button.push" expertMode="0" infoText="Equivalent of pushing the Laser Enable button on the front panel (turns booster SOA on/off when laser is running and autostart has been performed)."/>
+		<Button name="Reboot" command="sys.restart.reboot" expertMode="1" infoText="Perform restart procedure."/>/>
+		<Button name="Do Autostart" command="reg.autostart" expertMode="1" infoText="Perform autostart procedure."/>
+		<Button name="Do Freq Scan" command="reg.flt.freq.do_scan" expertMode="1" infoText="Activates a frequency optimization scan. Can lead to better laser performance if current frequency is sub-optimum."/>
+	</Buttons>
+	
+	<ComboBoxes>
+		<ComboBox name="acq.start" expertMode="0" options="EXT,OFF,FORCE" infoText="Gates the user_wfm_adc_trig_out_X/Y waveforms according to the mode: 0 waveform active only when the input selected by acq.start_src is HIGH (TTL), 1 Always OFF, 2 Always ON."/>
+		<ComboBox name="acq.trig_src" expertMode="0" options="Sync Out 0,Sync Out 1,FDML,Rg odd,RG even,RG both,Always" infoText="Currently not used."/>
+		<ComboBox name="acq.start_src" expertMode="0" options="BNC A,BNC B,BNC C,BNC D,SMA Aux IO,RJ45" infoText="Selects the acq.start gate physical input G."/>
+		<ComboBox name="xyout.enwfm 0" expertMode="0" options="enabled,disabled" infoText="Enables or disables the Channel 0"/>
+		<ComboBox name="xyout.wfm_type 0" expertMode="0" options="triangle,sine,arb" infoText="Changes wafeform type of Channel 0"/>
+		<ComboBox name="xyout.step.src 0" expertMode="0" options="Sync Out 0,Sync out 1,FDML" infoText="Changes the step source (sample clock) SRC of Channel 2"/>
+		<ComboBox name="xyout.enwfm 1" expertMode="0" options="enabled,disabled" infoText="Enables or disables the Channel 1"/>
+		<ComboBox name="xyout.wfm_type 1" expertMode="0" options="triangle,sine,arb" infoText="Changes wafeform type of Channel 0"/>
+		<ComboBox name="xyout.step.src 1" expertMode="0" options="Sync Out 0,Sync out 1,FDML" infoText="Changes the step source (sample clock) SRC of Channel 1"/>
+		<ComboBox name="reg.flt.freq.enable" expertMode="1" options="enabled,disabled" infoText="Enables or disables the frequency filter"/>
+		<ComboBox name="reg.flt.cr.enable" expertMode="1" options="enabled,disabled" infoText="Enables or disables the high pass filter"/>
+		<ComboBox name="rg.pol.ftrig" expertMode="1" options="off,odd,even,both" infoText="..."/>
+		<ComboBox name="rg.pol.start" expertMode="1" options="off,odd,even,both" infoText="..."/>
+		<ComboBox name="io.bnc.mux 0" expertMode="0" options="low,FDML_start_tick_0,user_wfm_adc_trig_out_X,user_wfm_adc_trig_out_Y,user_wfm_sync_out_X,user_wfm_sync_out_Y,sync_wfm_0_[0]/blip_0,sync_wfm_0_[1]/blip_1,sync_wfm_0_[2]/blip_2,sync_wfm_0_[3]/blip_3,sync_wfm_0_[4]/spike_0,sync_wfm_0_[5]/spike_1,sync_wfm_0_[6]/fadc_sw_0,sync_wfm_0_[7]/fadc_sw_1,sync_wfm_1_[0],sync_wfm_1_[1],sync_wfm_1_[2],sync_wfm_1_[3],sync_wfm_1_[4]/user_0,sync_wfm_1_[5]/user_1,sync_wfm_1_[6],sync_wfm_1_[7],BNC_in_A,BNC_in_B,BNC_in_C,BNC_in_D,LVDS_in,ext_acq_start_in,RG_adc_trig_out,RG_sync_out,RG_acq_active,blip_det_in_0,blip_det_in_1,blip_det_in_2,blip_det_in_3,blip_det_in_all,lip_det_all,blip_tcp_pulse_0,blip_tcp_pulse_1,blip_tcp_pulse_2,blip_tcp_pulse_3,spike_det_in,spike_gated_0,spike_gated_1,spike_gated_tgl_0,spike_gated_tgl_1,SPI_SS_0,SPI_SS_1,SPI_SS_2,SPI_SS_3,SPI_SS4_0,SCPLL_LD,SCPLL_MUXOUT" infoText="BNC A"/>
+		<ComboBox name="io.bnc.inv 0" expertMode="0" options="Normal,Inverted" infoText="BNC A"/>
+		<ComboBox name="io.bnc.dir 0" expertMode="0" options="Input,Output" infoText="BNC A"/>
+		<ComboBox name="io.bnc.mux 1" expertMode="0" options="low,FDML_start_tick_0,user_wfm_adc_trig_out_X,user_wfm_adc_trig_out_Y,user_wfm_sync_out_X,user_wfm_sync_out_Y,sync_wfm_0_[0]/blip_0,sync_wfm_0_[1]/blip_1,sync_wfm_0_[2]/blip_2,sync_wfm_0_[3]/blip_3,sync_wfm_0_[4]/spike_0,sync_wfm_0_[5]/spike_1,sync_wfm_0_[6]/fadc_sw_0,sync_wfm_0_[7]/fadc_sw_1,sync_wfm_1_[0],sync_wfm_1_[1],sync_wfm_1_[2],sync_wfm_1_[3],sync_wfm_1_[4]/user_0,sync_wfm_1_[5]/user_1,sync_wfm_1_[6],sync_wfm_1_[7],BNC_in_A,BNC_in_B,BNC_in_C,BNC_in_D,LVDS_in,ext_acq_start_in,RG_adc_trig_out,RG_sync_out,RG_acq_active,blip_det_in_0,blip_det_in_1,blip_det_in_2,blip_det_in_3,blip_det_in_all,lip_det_all,blip_tcp_pulse_0,blip_tcp_pulse_1,blip_tcp_pulse_2,blip_tcp_pulse_3,spike_det_in,spike_gated_0,spike_gated_1,spike_gated_tgl_0,spike_gated_tgl_1,SPI_SS_0,SPI_SS_1,SPI_SS_2,SPI_SS_3,SPI_SS4_0,SCPLL_LD,SCPLL_MUXOUT" infoText="BNC B"/>
+		<ComboBox name="io.bnc.inv 1" expertMode="0" options="Normal,Inverted" infoText="BNC B"/>
+		<ComboBox name="io.bnc.dir 1" expertMode="0" options="Input,Output" infoText="BNC B"/>
+		<ComboBox name="io.bnc.mux 2" expertMode="0" options="low,FDML_start_tick_0,user_wfm_adc_trig_out_X,user_wfm_adc_trig_out_Y,user_wfm_sync_out_X,user_wfm_sync_out_Y,sync_wfm_0_[0]/blip_0,sync_wfm_0_[1]/blip_1,sync_wfm_0_[2]/blip_2,sync_wfm_0_[3]/blip_3,sync_wfm_0_[4]/spike_0,sync_wfm_0_[5]/spike_1,sync_wfm_0_[6]/fadc_sw_0,sync_wfm_0_[7]/fadc_sw_1,sync_wfm_1_[0],sync_wfm_1_[1],sync_wfm_1_[2],sync_wfm_1_[3],sync_wfm_1_[4]/user_0,sync_wfm_1_[5]/user_1,sync_wfm_1_[6],sync_wfm_1_[7],BNC_in_A,BNC_in_B,BNC_in_C,BNC_in_D,LVDS_in,ext_acq_start_in,RG_adc_trig_out,RG_sync_out,RG_acq_active,blip_det_in_0,blip_det_in_1,blip_det_in_2,blip_det_in_3,blip_det_in_all,lip_det_all,blip_tcp_pulse_0,blip_tcp_pulse_1,blip_tcp_pulse_2,blip_tcp_pulse_3,spike_det_in,spike_gated_0,spike_gated_1,spike_gated_tgl_0,spike_gated_tgl_1,SPI_SS_0,SPI_SS_1,SPI_SS_2,SPI_SS_3,SPI_SS4_0,SCPLL_LD,SCPLL_MUXOUT" infoText="BNC C"/>
+		<ComboBox name="io.bnc.inv 2" expertMode="0" options="Normal,Inverted" infoText="BNC C"/>
+		<ComboBox name="io.bnc.dir 2" expertMode="0" options="Input,Output" infoText="BNC C"/>
+		<ComboBox name="io.bnc.mux 3" expertMode="0" options="low,FDML_start_tick_0,user_wfm_adc_trig_out_X,user_wfm_adc_trig_out_Y,user_wfm_sync_out_X,user_wfm_sync_out_Y,sync_wfm_0_[0]/blip_0,sync_wfm_0_[1]/blip_1,sync_wfm_0_[2]/blip_2,sync_wfm_0_[3]/blip_3,sync_wfm_0_[4]/spike_0,sync_wfm_0_[5]/spike_1,sync_wfm_0_[6]/fadc_sw_0,sync_wfm_0_[7]/fadc_sw_1,sync_wfm_1_[0],sync_wfm_1_[1],sync_wfm_1_[2],sync_wfm_1_[3],sync_wfm_1_[4]/user_0,sync_wfm_1_[5]/user_1,sync_wfm_1_[6],sync_wfm_1_[7],BNC_in_A,BNC_in_B,BNC_in_C,BNC_in_D,LVDS_in,ext_acq_start_in,RG_adc_trig_out,RG_sync_out,RG_acq_active,blip_det_in_0,blip_det_in_1,blip_det_in_2,blip_det_in_3,blip_det_in_all,lip_det_all,blip_tcp_pulse_0,blip_tcp_pulse_1,blip_tcp_pulse_2,blip_tcp_pulse_3,spike_det_in,spike_gated_0,spike_gated_1,spike_gated_tgl_0,spike_gated_tgl_1,SPI_SS_0,SPI_SS_1,SPI_SS_2,SPI_SS_3,SPI_SS4_0,SCPLL_LD,SCPLL_MUXOUT" infoText="BNC D"/>
+		<ComboBox name="io.bnc.inv 3" expertMode="0" options="Normal,Inverted" infoText="BNC D"/>
+		<ComboBox name="io.bnc.mux 0" expertMode="0" options="low,FDML_start_tick_0,user_wfm_adc_trig_out_X,user_wfm_adc_trig_out_Y,user_wfm_sync_out_X,user_wfm_sync_out_Y,sync_wfm_0_[0]/blip_0,sync_wfm_0_[1]/blip_1,sync_wfm_0_[2]/blip_2,sync_wfm_0_[3]/blip_3,sync_wfm_0_[4]/spike_0,sync_wfm_0_[5]/spike_1,sync_wfm_0_[6]/fadc_sw_0,sync_wfm_0_[7]/fadc_sw_1,sync_wfm_1_[0],sync_wfm_1_[1],sync_wfm_1_[2],sync_wfm_1_[3],sync_wfm_1_[4]/user_0,sync_wfm_1_[5]/user_1,sync_wfm_1_[6],sync_wfm_1_[7],BNC_in_A,BNC_in_B,BNC_in_C,BNC_in_D,LVDS_in,ext_acq_start_in,RG_adc_trig_out,RG_sync_out,RG_acq_active,blip_det_in_0,blip_det_in_1,blip_det_in_2,blip_det_in_3,blip_det_in_all,lip_det_all,blip_tcp_pulse_0,blip_tcp_pulse_1,blip_tcp_pulse_2,blip_tcp_pulse_3,spike_det_in,spike_gated_0,spike_gated_1,spike_gated_tgl_0,spike_gated_tgl_1,SPI_SS_0,SPI_SS_1,SPI_SS_2,SPI_SS_3,SPI_SS4_0,SCPLL_LD,SCPLL_MUXOUT" infoText="BNC A"/>
+		<ComboBox name="io.bnc.inv 0" expertMode="0" options="Normal,Inverted" infoText="BNC A"/>
+	</ComboBoxes>
+	
+	
+</Elements>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
