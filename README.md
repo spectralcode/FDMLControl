@@ -36,7 +36,7 @@ If you need FDMLControl for a different operating system, the easiest way is to 
 Compiling
 ---------
 
-Compiling FDMLControl requires installation of [Qt](https://www.qt.io/) Once you have installed Qt the easiest way tom compile
+Compiling FDMLControl requires installation of [Qt](https://www.qt.io/). Once you have installed Qt the easiest way to compile
 FDMLControl is with the QtCreator. Clone/Download the FDMLControl source files and open the .pro file with QtCreator to compile FDMLControl for your operating system. 
 
 Contributors
