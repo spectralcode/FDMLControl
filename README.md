@@ -11,7 +11,7 @@ Features
 --------
 
 * **Dynamic GUI generation**  </br>
-All the FDML laser parameters that can be seen in the graphical user interface are generated from a XML file during start up. The XML file (fdml_commands.xml) is placed in the same folder as the executable and can be modified to adjust FDMLControl to possible firmware updates of the Optores FDML laser.
+All the FDML laser parameters that can be seen in the graphical user interface are generated from a XML file during start up. The XML file ([fdml_commands.xml](src/fdml_commands.xml)) is placed in the same folder as the executable and can be modified to adjust FDMLControl to possible firmware updates of the Optores FDML laser.
 
 * **Expert mode** </br>
 The expert mode enables access to more advanced features such as a custom command console. 
