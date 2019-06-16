@@ -27,7 +27,7 @@ Installing
 ----------
 
 A precompiled package for Windows (64bit) can be downloaded from:
-[GitHub release section](https://github.com/spectralcode/FDMLControl/releases/download/v1.0.0/FDMLControl_win64.zip).
+[GitHub release section](https://github.com/spectralcode/FDMLControl/releases/download/v1.0.0/FDMLControl_v1.0.0_win64.zip).
 
 Extract the zip archive and execute FDMLControl, installation is not necessary.
 
