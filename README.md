@@ -10,16 +10,16 @@ FDMLControl enables the control of the [Optores](https://www.optores.com/) FDML 
 Features
 --------
 
-* **Dynamic GUI generation**  
+* **Dynamic GUI generation**  </br>
 All the FDML laser parameters that can be seen in the graphical user interface are generated from a XML file during start up. The XML file (fdml_commands.xml) is placed in the same folder as the executable and can be modified to adjust FDMLControl to possible firmware updates of the Optores FDML laser.
 
-* **Expert mode** 
+* **Expert mode** </br>
 The expert mode enables access to more advanced features such as a custom command console. 
 
-* **Admin privileges** 
+* **Admin privileges** </br>
 Admin privileges can be obtained by placing a file with the corresponding key in the same folder as the executable. This makes it possible to change laser parameters which otherwise could not be accessed. FDMLControl obtaines admin privileges automatically if "key.dat" is found in the same folder as the executable during start up. Please contact [Optores](https://www.optores.com/) if you need the admin key for your laser. 
 
-* **Cross platform** 
+* **Cross platform** </br>
 FDMLControl runs on Windows and Linux (Probably also on Mac, but this has not been tested yet.)
 
 
