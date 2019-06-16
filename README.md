@@ -42,7 +42,7 @@ FDMLControl is with the QtCreator. Clone/Download the FDMLControl source files a
 Contributors
 --------------------
 
-Alexander Heisterkamp - Institute of Quantum Optics, Leibniz University Hannover
+Alexander Heisterkamp - Institute of Quantum Optics, Leibniz University Hannover</br>
 Tammo Ripken -  Industrial and Biomedical Optics Department, Laser Zentrum Hannover e.V.
 
 
