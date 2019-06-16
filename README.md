@@ -38,12 +38,18 @@ Compiling
 
 Compiling FDMLControl requires installation of [Qt](https://www.qt.io/). Once you have installed Qt the easiest way to compile
 FDMLControl is with the QtCreator. Clone/Download the FDMLControl source files and open the .pro file with QtCreator to compile FDMLControl for your operating system. 
+The final step is to copy [fdml_commands.xml] (src / fdml_commands.xml) to the application folder. If you have the administrator key for your laser, you can create a file containing only the key and name it "key.dat". Copy key.dat to the application folder as well.
 
 Contributors
 --------------------
 
 Alexander Heisterkamp - Institute of Quantum Optics, Leibniz University Hannover</br>
 Tammo Ripken -  Industrial and Biomedical Optics Department, Laser Zentrum Hannover e.V.
+
+
+Acknowledgement
+--------------------
+Many thanks to Tim, who searched the Optores user manual for information on each parameter to complete the XML file. 
 
 
 ## License
