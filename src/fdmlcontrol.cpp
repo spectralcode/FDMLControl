@@ -88,15 +88,15 @@ void FDMLControl::initQueryWidgets(){
 	auto comboBoxWidgets = this->widgetManager->getComboBoxWidgets();
 
 	auto buttonLayout = new QHBoxLayout(this);
-	buttonLayout->setContentsMargins(1, 3, 1, 3);
-	buttonLayout->setSpacing(0);
+    buttonLayout->setContentsMargins(1, 3, 1, 3);
+    buttonLayout->setSpacing(1);
 	this->ui.groupBox_commands->setLayout(buttonLayout);
     this->ui.groupBox_commands->setFixedHeight(55);
-	buttonLayout->addSpacing(10);
 	for (int i = 0; i < buttonWidgets.size(); i++) {
 		buttonLayout->addWidget(buttonWidgets.at(i));
 		connect(buttonWidgets.at(i), &QueryWidget::query, this->queryManager, &QueryManager::receiveQuery, Qt::QueuedConnection);
 	}
+    buttonLayout->addStretch();
 
 	//Init IntVlaueWidgets and scroll area
     auto scrollAreaLayout = new QVBoxLayout(this->ui.scrollAreaWidgetContents);

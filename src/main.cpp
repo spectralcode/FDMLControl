@@ -41,8 +41,8 @@ void style(){
     dark.setColor(QPalette::Button,QColor(50, 50, 50));
     dark.setColor(QPalette::Base, QColor(25, 25, 25));
     dark.setColor(QPalette::AlternateBase, QColor(50, 50, 50));
-    dark.setColor(QPalette::ToolTipBase, QColor(255, 255, 255));
-    dark.setColor(QPalette::ToolTipText, QColor(255, 255, 255));
+    dark.setColor(QPalette::ToolTipBase, QColor(200, 200, 200));
+    dark.setColor(QPalette::ToolTipText, QColor(50, 50, 50));
     dark.setColor(QPalette::ButtonText, QColor(255, 255, 255));
     dark.setColor(QPalette::BrightText, QColor(255, 0, 0));
     dark.setColor(QPalette::Link, QColor(40, 130, 220));

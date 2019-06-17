@@ -28,34 +28,29 @@
 **          Version:    1.0.0                                             **
 ****************************************************************************/
 
-#include "buttonquerywidget.h"
+#include "consolewidget.h"
 
-ButtonQueryWidget::ButtonQueryWidget(QWidget *parent) : QueryWidget(parent) {
-	this->button = new QPushButton(this);
-    //this->button->setFixedWidth(75);
-	this->button->setFixedHeight(23);
-    this->layout = new QHBoxLayout(this);
-    this->layout->setMargin(1);
-    this->layout->addWidget(this->button);;
-    this->layout->setMargin(1);
-	connect(this->button, &QPushButton::clicked, this, &ButtonQueryWidget::sendQuery);
+ConsoleWidget::ConsoleWidget(QWidget *parent)
+	: QueryWidget(parent)
+{
+	ui.setupUi(this);
+	connect(this->ui.lineEdit, &QLineEdit::returnPressed, this, &ConsoleWidget::slot_commandSent);
+	connect(this->ui.pushButton_send, &QPushButton::clicked, this, &ConsoleWidget::slot_commandSent);
 }
 
-ButtonQueryWidget::ButtonQueryWidget(QString name, QString command, bool expert, QString infoText, QWidget* parent) : ButtonQueryWidget(parent) {
-		this->name = name;
-		this->command = command;
-		this->expert = expert;
-		this->setToolTip("<font>" + infoText + "</font>");
-		this->button->setText(name);
-}
-
-ButtonQueryWidget::~ButtonQueryWidget()
+ConsoleWidget::~ConsoleWidget()
 {
 }
 
-void ButtonQueryWidget::handleResponse(QString initialQuery, QString response){
+void ConsoleWidget::slot_commandSent() {
+	QString command = this->ui.lineEdit->text();
+	emit query(this, command);
 }
 
-void ButtonQueryWidget::sendQuery() {
-	emit query(this, this->command);
+void ConsoleWidget::slot_addText(QString text) {
+	this->ui.plainTextEdit->appendPlainText(text);
+}
+
+void ConsoleWidget::handleResponse(QString initialQuery, QString response) {
+	this->slot_addText(initialQuery.remove(QRegExp("[\\r\\n]")) + "> " + response.remove(QRegExp("[\\r\\n]")));
 }
