@@ -303,8 +303,8 @@ void FDMLControl::showAbout() {
            "Contact:    zabic"
            "@"
            "iqo.uni-hannover.de<br>"
-           "Date:       12 June 2019<br>"
-           "Version:    1.0.0"));
+           "Date:       17 June 2019<br>"
+           "Version:    1.0.1"));
 }
 
 void FDMLControl::toggleExpertView() {
