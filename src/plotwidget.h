@@ -30,8 +30,8 @@
 
 #pragma once
 
-#define INTENSITY_QUERY_MAIN "fadc.dump? 0 256"
-#define INTENSITY_QUERY_CAVITY "fadc.dump? 1 256"
+#define INTENSITY_QUERY_MAIN "fadc.dump? 1 256"
+#define INTENSITY_QUERY_CAVITY "fadc.dump? 0 256"
 #define SOA_CURRENT "reg.sadc.dump.ch? 16"
 #define BOA_CURRENT "reg.sadc.dump.ch? 17"
 #define AUTO_UPDATE_TIME_MS 3000

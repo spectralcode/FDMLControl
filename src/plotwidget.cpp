@@ -34,9 +34,6 @@ PlotWidget::PlotWidget(QWidget *parent)
 	: QueryWidget(parent)
 {
 	this->plot = new QCustomPlot(this);
-
-
-
     this->plot->setBackground( QColor(50, 50, 50));
     this->plot->axisRect()->setBackground(QColor(55, 55, 55));
     this->plot->xAxis->setBasePen(QPen(Qt::white, 1));
@@ -76,7 +73,6 @@ PlotWidget::PlotWidget(QWidget *parent)
 	this->layout = new QVBoxLayout(this);
 	this->layout->addWidget(this->plot);
 
-
 	this->timer = new QTimer(this);
 	this->autoUpdate = false;
 	
@@ -98,7 +94,6 @@ PlotWidget::PlotWidget(QWidget *parent)
 
 	connect(this->checkBox, &QCheckBox::stateChanged, this, &PlotWidget::setAutoUpdate);
 	connect(this->plot, &QCustomPlot::mouseDoubleClick, this, &PlotWidget::rescalePlot);
-
 }
 
 PlotWidget::~PlotWidget()
@@ -133,7 +128,6 @@ void PlotWidget::rescalePlot(){
 	this->plot->graph(0)->rescaleKeyAxis();
 	this->plot->replot();
 }
-
 
 void PlotWidget::handleResponse(QString initialQuery, QString response) {
 	//check if response is not empty
