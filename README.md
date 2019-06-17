@@ -3,7 +3,7 @@
 FDMLControl enables the control of the [Optores](https://www.optores.com/) FDML laser via a serial connection.
 
 <p align="center">
-  <img src="images/FDMLControl_screenshot_linux.png">
+  <img src="images/FDMLControl_screenshot_ubuntu.png">
 </p>
 
 
