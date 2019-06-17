@@ -42,6 +42,7 @@ else {
 }
 
 HEADERS += ./fdmlcontrol.h \
+    fdml_commands.xml \
     ./QCustomPlot/qcustomplot.h \
     authenticationwidget.h \
     buttonquerywidget.h \
@@ -77,3 +78,15 @@ FORMS += ./ComSettingsWidget.ui \
 RESOURCES += fdmlcontrol.qrc
 
 RC_ICONS = FDMLControl_icon.ico
+
+#Copy xml file to application folder
+XMLFILE = $$PWD/fdml_commands.xml
+win32 {
+    XMLFILE = $$shell_path($$PWD/fdml_commands.xml)
+    DESTFOLDER = $$shell_path($$DESTDIR)
+}
+else {
+    XMLFILE = $$PWD/fdml_commands.xml
+    DESTFOLDER = $$DESTDIR
+}
+QMAKE_POST_LINK += $$QMAKE_COPY $$quote($${XMLFILE}) $$quote($${DESTFOLDER}) $$escape_expand(\\n\\t)
