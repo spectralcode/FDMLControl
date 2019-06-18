@@ -49,7 +49,7 @@ Tammo Ripken -  Industrial and Biomedical Optics Department, Laser Zentrum Hanno
 
 Acknowledgement
 --------------------
-Many thanks to Tim, who searched the Optores user manual for information on each parameter to complete the XML file. 
+Many thanks to Timm Landes, who searched the Optores user manual for information on each parameter to complete the XML file. 
 
 
 ## License
