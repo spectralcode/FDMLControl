@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #include "querywidgetmanager.h"
@@ -33,7 +31,6 @@
 QueryWidgetManager::QueryWidgetManager(QWidget *parent)
 	: QWidget(parent)
 {
-	
 }
 
 QueryWidgetManager::~QueryWidgetManager()
@@ -45,7 +42,7 @@ void QueryWidgetManager::createWidgetsFromXmlFile(QString filePath){
 	QFile file(filePath);
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
 		if (!document.setContent(&file)){
-			emit error(tr("Could not load integer elements from XML file."));
+            emit error(tr("XML file parse error. Could not load elements from XML file."));
 		}
 		file.close();
 	}
@@ -149,5 +146,5 @@ void QueryWidgetManager::optainComboBoxWidgets(QDomElement root, QString tag){
 
 			this->comboBoxWidgets.append(new ComboBoxQueryWidget(name, options, expert, infoText));
 		}
-	}
+    }
 }

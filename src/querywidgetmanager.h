@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #pragma once
@@ -68,7 +66,6 @@ private:
 	QList<ComboBoxQueryWidget*> comboBoxWidgets;
 
 public slots:
-
 
 signals:
 	void error(QString);
