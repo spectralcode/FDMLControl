@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #pragma once
@@ -44,12 +42,12 @@ class QueryManager : public QObject
 public:
 	QueryManager();
 	~QueryManager();
+    bool abort;
 
 private:
 	QSerialPort* serial;
 	QTimer* timeoutTimer;
 	bool sendLog;
-
 
 public slots:
 	void receiveQuery(QueryWidget* widget, QString query);

@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #pragma once
@@ -71,12 +69,6 @@ private:
 	QAction* logViewAction;
 	QAction* readOutAction;
 
-	void initQueryWidgets();
-	void initGui();
-	void initMenu();
-	void enableGroupBoxes(bool enable);
-	QVBoxLayout* generateLayout(QString name);
-
     QWidget* acqFrame;
     QWidget* galvoFrame;
     QWidget* rgpolFrame;
@@ -84,6 +76,13 @@ private:
     QWidget* boosterFrame;
     QWidget* bncFrame;
     QWidget* otherFrame;
+
+    void initQueryWidgets();
+    void sortQueryWidgetIntoGui(QueryWidget* widget, QVBoxLayout* acquisitionLayout, QVBoxLayout* galvoLayout, QVBoxLayout* rgpolLayout, QVBoxLayout* filterLayout, QVBoxLayout* boosterLayout, QVBoxLayout* bncLayout, QVBoxLayout* otherLayout);
+    void initGui();
+    void initMenu();
+    void enableGroupBoxes(bool enable);
+    QVBoxLayout* generateLayout(QString name);
 
 
 public slots:

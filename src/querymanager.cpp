@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #include "querymanager.h"
@@ -33,6 +31,7 @@
 QueryManager::QueryManager(){
 	this->serial = new QSerialPort(this);
 	this->sendLog = true;
+    this->abort = false;
 }
 
 QueryManager::~QueryManager()
@@ -40,6 +39,7 @@ QueryManager::~QueryManager()
 }
 
 void QueryManager::receiveQuery(QueryWidget* widget, QString query) {
+    if(abort){return;}
 	//Convert query string to QByteArray and send query to serial device
 	QByteArray carriageReturn = "\r";
 	QByteArray command = query.toLocal8Bit() + carriageReturn;
@@ -48,7 +48,6 @@ void QueryManager::receiveQuery(QueryWidget* widget, QString query) {
 		emit error(tr("Serial write error! Query: ") + query);
 		return;
 	}
-
 	if (this->serial->waitForBytesWritten(1000)) {
         //Read serial response until end of response was received ("\n" or "\r") or until timeout (1000 ms) occured
 		QByteArray response = this->serial->readAll();
