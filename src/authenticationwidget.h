@@ -42,11 +42,8 @@ class AuthenticationWidget : public QueryWidget
 public:
 	AuthenticationWidget(QString keyFilePath, QWidget* parent = 0, QString name = "");
 	~AuthenticationWidget();
-	QString getName() { return this->name; }
-
 
 private:
-	QString name;
 	QString key;
 	bool keyAvailable;
 

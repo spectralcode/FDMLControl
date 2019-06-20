@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #include "buttonquerywidget.h"

@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 //Abstract class that defines the necessary signals, slots and methods for communication with QueryManager
@@ -44,9 +42,11 @@ public:
 	~QueryWidget();
 	void setExpert(bool expertMode) { this->expert = expertMode; }
 	bool isExpert() { return this->expert; }
+    QString getName() { return this->name; }
 
 protected:
 	bool expert;
+    QString name;
 
 public slots:
 	virtual void handleResponse(QString initialQuery, QString response) = 0;

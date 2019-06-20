@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #include "querywidget.h"
@@ -34,6 +32,7 @@ QueryWidget::QueryWidget(QWidget *parent)
 	: QWidget(parent)
 {
 	this->expert = false;
+    this->name = "";
 }
 
 QueryWidget::~QueryWidget()

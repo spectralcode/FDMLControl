@@ -46,11 +46,9 @@ public:
 	void setMin(int minValue);
 	void setMax(int maxValue);
 	void setStepSize(int stepSize);
-	QString getName() { return this->name; }
 
 private:
 	int value;
-	QString name;
 	QSpinBox* spinBox;
 	QLabel* label;
 	QHBoxLayout* layout;

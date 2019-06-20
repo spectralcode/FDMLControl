@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #pragma once
@@ -43,17 +41,14 @@ class ComboBoxQueryWidget : public QueryWidget
 public:
 	ComboBoxQueryWidget(QWidget *parent = nullptr);
 	ComboBoxQueryWidget(QString name, QStringList options, bool expert, QString infoText, QWidget *parent = nullptr);
-	~ComboBoxQueryWidget();
-	QString getName() { return this->name; }
+	~ComboBoxQueryWidget();	
 
 private:
 	QComboBox* comboBox;
 	QLabel* label;
 	QHBoxLayout* layout;
-	QString name;
 	QStringList options;
 	bool enableDisableComboBox;
-
 
 public slots:
 	void handleResponse(QString initialQuery, QString response) override;
