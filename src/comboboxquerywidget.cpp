@@ -86,7 +86,7 @@ void ComboBoxQueryWidget::handleResponse(QString initialQuery, QString response)
 			int value = recoveredResponse.toInt();
 			//check if this combobox is a enable/disable comboBox and convert response (1 or -1) to coresponding comboBox index (0 or 1) 
 			if (this->enableDisableComboBox) {
-				value = value == 1 ? 0 : 1; 
+                value = value == 1 ? 0 : 1;
 			} 
             if(this->comboBox->count() > value){
                 this->comboBox->setCurrentIndex(value);
@@ -104,6 +104,9 @@ void ComboBoxQueryWidget::handleResponse(QString initialQuery, QString response)
 }
 
 void ComboBoxQueryWidget::changeValue(int value) {
+    if(this->enableDisableComboBox){
+        value = value == 1 ? -1 : 1;  //query value must be 1 or -1 if this ComboBox is used to just enable and disable a parameter
+    }
 	QString command = this->name + " " + QString::number(value);
 	emit query(this, command);
 }
