@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Elements>
 	<IntValueElements>
-		<IntValueElement command="scpll.cps" minValue="0" maxValue="20000" defaultValue="1664" stepSize="1" expertMode="0" infoText="Adjusts the frequency of the Clock Out port on the back panel. Use this output as external clock source for your data acquisition solution. The set value corresponds to half clock cycles per sweep."/>
-		<IntValueElement command="xyout.tri.amp 0" minValue="-1000" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="1" infoText="Controls the analog triangle amplitude of Channel 0. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
-		<IntValueElement command="xyout.tri.off 0" minValue="-2000000" maxValue="2000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 0."/>
-		<IntValueElement command="xyout.tri.pha 0" minValue="-2000000" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 0."/>
-		<IntValueElement command="xyout.tri.rise 0" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 0"/>
-		<IntValueElement command="xyout.tri.fall 0" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 0"/>
-		<IntValueElement command="xyout.tri.sync_out_phase 0" minValue="0" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 0."/>
-		<IntValueElement command="xyout.step.rep 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times. (Channel 0)"/>
-		<IntValueElement command="xyout.sine.amp 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 0."/>
-		<IntValueElement command="xyout.sine.off 0" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 0."/>
-		<IntValueElement command="xyout.sine.pha 0" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 0."/>
-		<IntValueElement command="xyout.sine.length 0" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 0."/>
-		<IntValueElement command="xyout.sine.sync_out_phase 0" minValue="0" maxValue="20000" defaultValue="1" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 0."/>
-		<IntValueElement command="xyout.tri.amp 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle amplitude of Channel 1. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
-		<IntValueElement command="xyout.tri.off 1" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 1."/>
-		<IntValueElement command="xyout.tri.pha 1" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 1."/>
-		<IntValueElement command="xyout.tri.rise 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 1"/>
-		<IntValueElement command="xyout.tri.fall 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 1"/>
-		<IntValueElement command="xyout.tri.sync_out_phase 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 1."/>
-		<IntValueElement command="xyout.step.rep 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times (Channel 1)"/>
-		<IntValueElement command="xyout.sine.amp 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 1."/>
-		<IntValueElement command="xyout.sine.off 1" minValue="-2000000" maxValue="20000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 1."/>
-		<IntValueElement command="xyout.sine.pha 1" minValue="-2000000" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 1."/>
-		<IntValueElement command="xyout.sine.length 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 1."/>
-		<IntValueElement command="xyout.sine.sync_out_phase 1" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 1."/>
-		<IntValueElement command="rg.div.fdiv" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
-		<IntValueElement command="rg.div.pha" minValue="0" maxValue="20000" defaultValue="0" stepSize="11" expertMode="1" infoText="..."/>
-		<IntValueElement command="rg.div.prediv" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.pha 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.duty 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.mulpow2 8" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.pha 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.duty 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="sync.wfm.s.mulpow2 9" minValue="0" maxValue="20000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
-		<IntValueElement command="ldc.low 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="0" infoText="..."/>
-		<IntValueElement command="ldc.high 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="1000" expertMode="0" infoText="Sets the SOA current."/>
-		<IntValueElement command="ldc.duty 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the duty cycle of the SOA"/>
-		<IntValueElement command="ldc.pha 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the SOA phase."/>
-		<IntValueElement command="ldc.mulpow2 1" minValue="0" maxValue="2000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
-		<IntValueElement command="reg.flt.freq" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser frequency in Hz. Do not change this frequency manually, it is controlled by the FDML frequency regulator. Perform a frequency scan (Do Freq Scan) if necessary"/>
-		<IntValueElement command="reg.flt.cr.center" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser center wavelength in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
-		<IntValueElement command="reg.flt.cr.range" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser sweep range in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
-		<IntValueElement command="flt.wfm.amp" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
-		<IntValueElement command="flt.hvoff" minValue="0" maxValue="20000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="scpll.cps" minValue="0" maxValue="100000000" defaultValue="1664" stepSize="1" expertMode="0" infoText="Adjusts the frequency of the Clock Out port on the back panel. Use this output as external clock source for your data acquisition solution. The set value corresponds to half clock cycles per sweep."/>
+                <IntValueElement command="xyout.tri.amp 0" minValue="-0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle amplitude of Channel 0. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
+		<IntValueElement command="xyout.tri.off 0" minValue="-100000000" maxValue="100000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 0."/>
+		<IntValueElement command="xyout.tri.pha 0" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 0."/>
+		<IntValueElement command="xyout.tri.rise 0" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 0"/>
+		<IntValueElement command="xyout.tri.fall 0" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 0"/>
+		<IntValueElement command="xyout.tri.sync_out_phase 0" minValue="-100000000" maxValue="100000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 0."/>
+		<IntValueElement command="xyout.step.rep 0" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times. (Channel 0)"/>
+		<IntValueElement command="xyout.sine.amp 0" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 0."/>
+		<IntValueElement command="xyout.sine.off 0" minValue="-100000000" maxValue="100000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 0."/>
+		<IntValueElement command="xyout.sine.pha 0" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 0."/>
+		<IntValueElement command="xyout.sine.length 0" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 0."/>
+		<IntValueElement command="xyout.sine.sync_out_phase 0" minValue="0" maxValue="100000000" defaultValue="1" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 0."/>
+		<IntValueElement command="xyout.tri.amp 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle amplitude of Channel 1. A value of 10000 corresponds roughly to a peak-to-peak amplitude of 6.35V"/>
+		<IntValueElement command="xyout.tri.off 1" minValue="-100000000" maxValue="100000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog triangle offset of Channel 1."/>
+		<IntValueElement command="xyout.tri.pha 1" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle phase of Channel 1."/>
+		<IntValueElement command="xyout.tri.rise 1" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of rising samples of the triangle waveform of Channel 1"/>
+		<IntValueElement command="xyout.tri.fall 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Number of falling samples of the triangle waveform of Channel 1"/>
+		<IntValueElement command="xyout.tri.sync_out_phase 1" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog triangle sync out phase of Channel 1."/>
+		<IntValueElement command="xyout.step.rep 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Step repetition: Each sample will be repeated N times (Channel 1)"/>
+		<IntValueElement command="xyout.sine.amp 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine amplitude of Channel 1."/>
+		<IntValueElement command="xyout.sine.off 1" minValue="-100000000" maxValue="100000000" defaultValue="0" stepSize="1" expertMode="0" infoText="Controls the analog sine offset of Channel 1."/>
+		<IntValueElement command="xyout.sine.pha 1" minValue="-100000000" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine phase of Channel 1."/>
+		<IntValueElement command="xyout.sine.length 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine length of Channel 1."/>
+		<IntValueElement command="xyout.sine.sync_out_phase 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="Controls the analog sine sync out phase of Channel 1."/>
+		<IntValueElement command="rg.div.fdiv" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
+		<IntValueElement command="rg.div.pha" minValue="0" maxValue="100000000" defaultValue="0" stepSize="11" expertMode="1" infoText="..."/>
+		<IntValueElement command="rg.div.prediv" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="1" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.pha 8" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.duty 8" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.mulpow2 8" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.pha 9" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.duty 9" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+		<IntValueElement command="sync.wfm.s.mulpow2 9" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1" expertMode="0" infoText="..."/>
+                <IntValueElement command="ldc.low 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="ldc.high 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="1000" expertMode="0" infoText="Sets the SOA current."/>
+		<IntValueElement command="ldc.duty 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the duty cycle of the SOA"/>
+		<IntValueElement command="ldc.pha 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Sets the SOA phase."/>
+		<IntValueElement command="ldc.mulpow2 1" minValue="0" maxValue="100000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="reg.flt.freq" minValue="0" maxValue="1000000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser frequency in Hz. Do not change this frequency manually, it is controlled by the FDML frequency regulator. Perform a frequency scan (Do Freq Scan) if necessary"/>
+		<IntValueElement command="reg.flt.cr.center" minValue="0" maxValue="1000000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser center wavelength in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
+		<IntValueElement command="reg.flt.cr.range" minValue="0" maxValue="1000000000" defaultValue="100" stepSize="10" expertMode="1" infoText="Laser sweep range in nanometers. Large changes in this parameter will cause the laser to drop out of its regulator, resulting in unstable laser behavior."/>
+		<IntValueElement command="flt.wfm.amp" minValue="0" maxValue="1000000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
+		<IntValueElement command="flt.hvoff" minValue="0" maxValue="1000000000" defaultValue="100" stepSize="10" expertMode="1" infoText="..."/>
 	</IntValueElements>
 	<Buttons>
 		<Button name="Laser Enable" command="sys.button.push" expertMode="0" infoText="Equivalent of pushing the Laser Enable button on the front panel (turns booster SOA on/off when laser is running and autostart has been performed)."/>
