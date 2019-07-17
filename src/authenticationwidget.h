@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 
@@ -42,6 +40,8 @@ class AuthenticationWidget : public QueryWidget
 public:
 	AuthenticationWidget(QString keyFilePath, QWidget* parent = 0, QString name = "");
 	~AuthenticationWidget();
+
+    bool isKeyAvailable();
 
 private:
 	QString key;

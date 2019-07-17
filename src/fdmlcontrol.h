@@ -68,6 +68,7 @@ private:
 	QAction* expertViewAction;
 	QAction* logViewAction;
 	QAction* readOutAction;
+    QAction* authenticateAction;
 
     QWidget* acqFrame;
     QWidget* galvoFrame;
@@ -93,9 +94,12 @@ public slots:
 	void toggleExpertView();
 	void toggleLogView();
 	void readOutDevice();
+    void authenticateAsAdmin();
 
 signals:
 	void serialResponse(QString);
 	void openSerialPort(ComSettings);
 	void closeSerialPort();
+    void error(QString);
+    void info(QString);
 };

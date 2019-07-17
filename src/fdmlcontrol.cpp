@@ -54,6 +54,8 @@ FDMLControl::FDMLControl(QWidget *parent) : QMainWindow(parent){
 	this->queryManager->moveToThread(&comThread);
 	connect(this, &FDMLControl::openSerialPort, this->queryManager, &QueryManager::openSerialPort);
 	connect(this, &FDMLControl::closeSerialPort, this->queryManager, &QueryManager::closeSerialPort);
+    connect(this, &FDMLControl::info, this->logConsole, &MessageConsole::slot_displayInfo);
+    connect(this, &FDMLControl::error, this->logConsole, &MessageConsole::slot_displayError);
 	connect(this->queryManager, &QueryManager::serialOpen, this, &FDMLControl::enableGui);
 	connect(this->queryManager, &QueryManager::info, this->logConsole, &MessageConsole::slot_displayInfo);
 	connect(this->queryManager, &QueryManager::error, this->logConsole, &MessageConsole::slot_displayError);
@@ -205,6 +207,9 @@ void FDMLControl::initMenu(){
 	QMenu* deviceMenu = this->menuBar()->addMenu(tr("&Device"));
 	this->readOutAction = deviceMenu->addAction(tr("&Read From Device"), this, &FDMLControl::readOutDevice);
 	this->readOutAction->setStatusTip(tr("Read out current FDML Laser parameters and update graphical user interface."));
+    this->authenticateAction = deviceMenu->addAction(tr("&Authenticate As Admin"), this, &FDMLControl::authenticateAsAdmin);
+    this->authenticateAction->setStatusTip(tr("Log in as administrator to edit expert parameters."));
+
 
 	QMenu* helpMenu = this->menuBar()->addMenu(tr("&Help"));
 	QAction* aboutAction = helpMenu->addAction(tr("&About"), this, &FDMLControl::showAbout);
@@ -259,6 +264,7 @@ void FDMLControl::enableGui(bool enable){
 	this->enableGroupBoxes(enable);
 	this->plot->setAutoUpdate(enable);
 	this->readOutAction->setEnabled(enable);
+    this->authenticateAction->setEnabled(enable);
 
 	if (enable) {
         this->authenticator->authenticate();
@@ -284,8 +290,8 @@ void FDMLControl::showAbout() {
            "Contact:    zabic"
            "@"
            "iqo.uni-hannover.de<br>"
-           "Date:       21 June 2019<br>"
-           "Version:    1.0.2"));
+           "Date:       17 July 2019<br>"
+           "Version:    1.0.3"));
 }
 
 void FDMLControl::toggleExpertView() {
@@ -302,5 +308,13 @@ void FDMLControl::toggleLogView() {
 }
 
 void FDMLControl::readOutDevice(){
-	this->widgetManager->queryCurrentValues();
+    this->widgetManager->queryCurrentValues();
+}
+
+void FDMLControl::authenticateAsAdmin(){
+    if(this->authenticator->isKeyAvailable()){
+        this->authenticator->authenticate();
+    }else{
+        emit error(tr("Administrator authentication not possible, key file is missing."));
+    }
 }
