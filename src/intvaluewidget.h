@@ -29,12 +29,14 @@
 ****************************************************************************/
 
 #pragma once
+
 #include <qwidget.h>
 #include <qspinbox.h>
 #include <qlabel.h>
 #include <qlayout.h>
 #include <QCoreApplication>
 #include "querywidget.h"
+#include "eventguard.h"
 
 class IntValueWidget : public QueryWidget
 {
@@ -46,7 +48,9 @@ public:
 	void setMin(int minValue);
 	void setMax(int maxValue);
 	void setStepSize(int stepSize);
+    QString content() override;
 
+    
 private:
 	int value;
 	QSpinBox* spinBox;
@@ -60,8 +64,7 @@ public slots:
 	void queryCurrentValue();
 	void handleResponse(QString initialQuery, QString response) override;
 
+    
 signals:
 	void valueChanged(QString name, int value);
-
 };
-

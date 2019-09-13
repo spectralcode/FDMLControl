@@ -44,15 +44,19 @@
 
 #define COMMAND_FILE_PATH QCoreApplication::applicationDirPath() + "/fdml_commands.xml"
 #define KEY_FILE_PATH QCoreApplication::applicationDirPath() + "/key.dat"
+#define VERSION "1.0.4"
+#define VERSION_DATE "13 September 2019"
 
 class FDMLControl : public QMainWindow
 {
 	Q_OBJECT
 	QThread comThread;
 
+
 public:
 	FDMLControl(QWidget *parent = Q_NULLPTR);
 	~FDMLControl();
+
 
 private:
 	Ui::FDMLControlClass ui;
@@ -95,6 +99,7 @@ public slots:
 	void toggleLogView();
 	void readOutDevice();
     void authenticateAsAdmin();
+
 
 signals:
 	void serialResponse(QString);

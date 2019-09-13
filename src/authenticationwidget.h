@@ -43,16 +43,18 @@ public:
 
     bool isKeyAvailable();
 
+
 private:
 	QString key;
 	bool keyAvailable;
+
 
 public slots:
 	void loadKeyFromFile(QString filePath);
 	void authenticate();
 	void handleResponse(QString initialQuery, QString response) override;
 
+
 signals:
 
 };
-

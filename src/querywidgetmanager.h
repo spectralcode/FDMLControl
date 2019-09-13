@@ -37,6 +37,9 @@
 #include "intvaluewidget.h"
 #include "buttonquerywidget.h"
 #include "comboboxquerywidget.h"
+#include <QFileDialog>
+#include <QDateTime>
+
 
 class QueryWidgetManager : public QWidget
 {
@@ -65,7 +68,9 @@ private:
 	QList<ButtonQueryWidget*> buttonWidgets;
 	QList<ComboBoxQueryWidget*> comboBoxWidgets;
 
+
 public slots:
+    void saveWidgetValuesToFile();
 
 signals:
 	void error(QString);

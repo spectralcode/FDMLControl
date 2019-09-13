@@ -35,6 +35,7 @@
 #include "querywidget.h"
 #include "comsettingswidget.h"
 
+
 class QueryManager : public QObject
 {
 	Q_OBJECT

@@ -31,13 +31,14 @@
 QueryWidgetManager::QueryWidgetManager(QWidget *parent)
 	: QWidget(parent)
 {
+
 }
 
 QueryWidgetManager::~QueryWidgetManager()
 {
 }
 
-void QueryWidgetManager::createWidgetsFromXmlFile(QString filePath){
+void QueryWidgetManager::createWidgetsFromXmlFile(QString filePath) {
 	QDomDocument document;
 	QFile file(filePath);
 	if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
@@ -58,21 +59,21 @@ void QueryWidgetManager::queryCurrentValues(){
 	this->queryCurrentComboBoxValues();
 }
 
-void QueryWidgetManager::queryCurrentIntValues(){
-    foreach(auto widget, this->intValueWidgets){
+void QueryWidgetManager::queryCurrentIntValues() {
+    foreach(auto widget, this->intValueWidgets) {
 		widget->queryCurrentValue();
 	}
 	QCoreApplication::processEvents();
 }
 
-void QueryWidgetManager::queryCurrentComboBoxValues(){
+void QueryWidgetManager::queryCurrentComboBoxValues() {
 	foreach(auto widget, this->comboBoxWidgets) {
 		widget->queryCurrentValue();
 	}
 	QCoreApplication::processEvents();
 }
 
-void QueryWidgetManager::setExpertWidgetsVisible(bool visible){
+void QueryWidgetManager::setExpertWidgetsVisible(bool visible) {
 	if (this->intValueWidgets.size() > 0) {
         foreach (auto widget, this->intValueWidgets){
 			if (widget->isExpert()) {
@@ -95,7 +96,36 @@ void QueryWidgetManager::setExpertWidgetsVisible(bool visible){
 				widget->setVisible(visible);
 			}
 		}
-	}
+    }
+}
+
+void QueryWidgetManager::saveWidgetValuesToFile() {
+    QString filters("Text files (*.txt);;All files (*.*)");
+    QString defaultFilter("Text files (*.txt)");
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save FDML Laser Parameter Values"), QDir::currentPath(), filters, &defaultFilter);
+    if(fileName == ""){
+        emit error(tr("Save parameters to disk canceled."));
+        return;
+    }
+    QString timestamp = QDateTime::currentDateTime().toString("yyyyMMdd_hh-mm-ss-zzz");
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly)) {
+        emit error(tr("Unable to write file! ") + file.errorString());
+        return;
+    }
+    QTextStream out(&file);
+    out << tr("FDMLControl Parameters") + "\n" + tr("Time stamp: ") + timestamp + "\n\n";
+    out << tr("Integer Parameters: \n");
+    foreach (auto widget, this->intValueWidgets){
+        out << widget->content() + "\n";
+    }
+    out << tr("\nSelection Parameters: \n");
+    foreach (auto widget, this->comboBoxWidgets){
+        out << widget->content() + "\n";
+    }
+    file.close();
+    emit info(tr("File saved to: ") + fileName);
 }
 
 void QueryWidgetManager::optainIntValueWidgets(QDomElement root, QString tag) {
@@ -133,7 +163,7 @@ void QueryWidgetManager::optainButtonWidgets(QDomElement root, QString tag) {
 	}
 }
 
-void QueryWidgetManager::optainComboBoxWidgets(QDomElement root, QString tag){
+void QueryWidgetManager::optainComboBoxWidgets(QDomElement root, QString tag) {
 	QDomNodeList nodes = root.elementsByTagName(tag);
 	for (int i = 0; i < nodes.count(); i++) {
 		QDomNode node = nodes.at(i);

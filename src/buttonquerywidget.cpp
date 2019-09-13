@@ -40,18 +40,17 @@ ButtonQueryWidget::ButtonQueryWidget(QWidget *parent) : QueryWidget(parent) {
 }
 
 ButtonQueryWidget::ButtonQueryWidget(QString name, QString command, bool expert, QString infoText, QWidget* parent) : ButtonQueryWidget(parent) {
-		this->name = name;
-		this->command = command;
-		this->expert = expert;
-		this->setToolTip("<font>" + infoText + "</font>");
-		this->button->setText(name);
+    this->name = name;
+    this->command = command;
+    this->expert = expert;
+    this->setToolTip("<font>" + infoText + "</font>");
+    this->button->setText(name);
 }
 
-ButtonQueryWidget::~ButtonQueryWidget()
-{
+ButtonQueryWidget::~ButtonQueryWidget() {
 }
 
-void ButtonQueryWidget::handleResponse(QString initialQuery, QString response){
+void ButtonQueryWidget::handleResponse(QString initialQuery, QString response) {
 }
 
 void ButtonQueryWidget::sendQuery() {

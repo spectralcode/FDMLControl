@@ -59,6 +59,8 @@ FDMLControl::FDMLControl(QWidget *parent) : QMainWindow(parent){
 	connect(this->queryManager, &QueryManager::serialOpen, this, &FDMLControl::enableGui);
 	connect(this->queryManager, &QueryManager::info, this->logConsole, &MessageConsole::slot_displayInfo);
 	connect(this->queryManager, &QueryManager::error, this->logConsole, &MessageConsole::slot_displayError);
+    connect(this->widgetManager, &QueryWidgetManager::info, this->logConsole, &MessageConsole::slot_displayInfo);
+    connect(this->widgetManager, &QueryWidgetManager::error, this->logConsole, &MessageConsole::slot_displayError);
 	connect(&comThread, &QThread::finished, queryManager, &QueryManager::deleteLater);
 	connect(&comThread, &QThread::finished, &comThread, &QThread::deleteLater);
 	comThread.start();
@@ -187,9 +189,11 @@ void FDMLControl::initGui(){
 
 void FDMLControl::initMenu(){
     QMenu *fileMenu = this->menuBar()->addMenu(tr("&File"));
-	QAction *exitAct = fileMenu->addAction(tr("E&xit"), this, &QWidget::close);
-	exitAct->setShortcuts(QKeySequence::Quit);
-	exitAct->setStatusTip(tr("Close FDML Control"));
+    QAction* saveToFileAction = fileMenu->addAction(tr("&Save Parameters"), this->widgetManager, &QueryWidgetManager::saveWidgetValuesToFile);
+    saveToFileAction->setStatusTip(tr("Save parameter values that are visible in right area of FDMLControl"));
+    QAction *exitAct = fileMenu->addAction(tr("E&xit"), this, &QWidget::close);
+    exitAct->setShortcuts(QKeySequence::Quit);
+    exitAct->setStatusTip(tr("Close FDML Control"));
 
 	QMenu* viewMenu = this->menuBar()->addMenu(tr("&View"));
 	this->expertViewAction = viewMenu->addAction(tr("&Expert"), this, &FDMLControl::toggleExpertView);
@@ -290,8 +294,8 @@ void FDMLControl::showAbout() {
            "Contact:    zabic"
            "@"
            "iqo.uni-hannover.de<br>"
-           "Date:       17 July 2019<br>"
-           "Version:    1.0.3"));
+           "Date:       ")+ VERSION_DATE + tr("<br>"
+           "Version:    ") + VERSION);
 }
 
 void FDMLControl::toggleExpertView() {

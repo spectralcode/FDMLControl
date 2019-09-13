@@ -28,8 +28,7 @@
 **          Version:    1.0.0                                             **
 ****************************************************************************/
 
-#ifndef MESSAGECONSOLE_H
-#define MESSAGECONSOLE_H
+#pragma once
 
 #include <QTextEdit>
 #include <QGridLayout>
@@ -71,5 +70,3 @@ public slots:
     void slot_displayInfo(QString info);
     void slot_displayError(QString error);
 };
-
-#endif // MESSAGECONSOLE_H

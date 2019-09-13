@@ -41,11 +41,12 @@ AuthenticationWidget::~AuthenticationWidget()
 {
 }
 
-bool AuthenticationWidget::isKeyAvailable(){
+bool AuthenticationWidget::isKeyAvailable()
+{
     return this->keyAvailable;
 }
 
-void AuthenticationWidget::loadKeyFromFile(QString filePath){
+void AuthenticationWidget::loadKeyFromFile(QString filePath) {
 	QFile inputFile(filePath);
 	if (inputFile.open(QIODevice::ReadOnly)){
 		QTextStream in(&inputFile);
@@ -97,7 +98,7 @@ void AuthenticationWidget::handleResponse(QString initialQuery, QString response
 			}
 		}
 	}
-    else if (status == "401"){
+	else if (status == "401") {
 		emit error(tr("Invalid command! Initial query: ") + initialQuery + tr(" Response: ") + recoveredResponse);
 	}
 	else {

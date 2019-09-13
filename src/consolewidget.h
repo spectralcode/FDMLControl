@@ -24,8 +24,6 @@
 **                      at                                                **
 **                      iqo.uni-hannover.de                               **
 **                                                                        **
-**          Date:       12 June 2019                                      **
-**          Version:    1.0.0                                             **
 ****************************************************************************/
 
 #pragma once
@@ -42,8 +40,10 @@ public:
 	ConsoleWidget(QWidget *parent = Q_NULLPTR);
 	~ConsoleWidget();
 
+
 private:
 	Ui::ConsoleWidget ui;
+
 
 public slots:
 	void handleResponse(QString initialQuery, QString response) override;

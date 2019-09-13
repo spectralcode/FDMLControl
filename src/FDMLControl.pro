@@ -52,7 +52,8 @@ HEADERS += ./fdmlcontrol.h \
     plotwidget.h \
     querymanager.h \
     querywidget.h \
-    querywidgetmanager.h
+    querywidgetmanager.h \
+    eventguard.h
 
 SOURCES += ./fdmlcontrol.cpp \
     ./QCustomPlot/qcustomplot.cpp \
@@ -67,10 +68,11 @@ SOURCES += ./fdmlcontrol.cpp \
     plotwidget.cpp \
     querymanager.cpp \
     querywidget.cpp \
-    querywidgetmanager.cpp
+    querywidgetmanager.cpp \
+    eventguard.cpp
 
-FORMS += ./ComSettingsWidget.ui \
-    ./ConsoleWidget.ui \
+FORMS += ./comsettingswidget.ui \
+    ./consolewidget.ui \
     ./fdmlcontrol.ui
 
 RESOURCES += fdmlcontrol.qrc

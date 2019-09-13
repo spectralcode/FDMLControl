@@ -43,6 +43,7 @@ public:
 	void setExpert(bool expertMode) { this->expert = expertMode; }
 	bool isExpert() { return this->expert; }
     QString getName() { return this->name; }
+    virtual QString content(){ return getName(); }
 
 protected:
 	bool expert;

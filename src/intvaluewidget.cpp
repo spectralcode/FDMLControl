@@ -34,6 +34,8 @@ IntValueWidget::IntValueWidget(QWidget* parent, QString name) : QueryWidget(pare
 	this->value = 0;
 	this->name = name;
 	this->spinBox = new QSpinBox(this);
+    this->spinBox->setFocusPolicy(Qt::StrongFocus);
+    this->spinBox->installEventFilter(new EventGuard(this->spinBox)); //StrongFocus and event filter prevent the accidental change of spinbox value inside QScrollArea
 	this->label = new QLabel(this->name, this);
 	this->layout = new QHBoxLayout(this);
     this->layout->setMargin(0);
@@ -55,18 +57,20 @@ IntValueWidget::~IntValueWidget()
 {
 }
 
-void IntValueWidget::setMin(int minValue)
-{
+void IntValueWidget::setMin(int minValue) {
 	this->spinBox->setMinimum(minValue);
 }
 
-void IntValueWidget::setMax(int maxValue)
-{
+void IntValueWidget::setMax(int maxValue) {
 	this->spinBox->setMaximum(maxValue);
 }
 
 void IntValueWidget::setStepSize(int stepSize){
-	this->spinBox->setSingleStep(stepSize);
+    this->spinBox->setSingleStep(stepSize);
+}
+
+QString IntValueWidget::content(){
+    return this->name + ":" + "\t" + QString::number(this->value);
 }
 
 void IntValueWidget::setValue(int value) {

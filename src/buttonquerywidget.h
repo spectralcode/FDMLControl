@@ -42,11 +42,13 @@ public:
 	ButtonQueryWidget(QString name, QString command, bool expert, QString infoText, QWidget *parent = nullptr);
 	~ButtonQueryWidget();
 
+    
 private:
 	QPushButton* button;
 	QHBoxLayout* layout;
 	QString command;
 
+    
 public slots:
 	void handleResponse(QString initialQuery, QString response) override;
 	void sendQuery();

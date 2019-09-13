@@ -30,6 +30,8 @@
 
 ComboBoxQueryWidget::ComboBoxQueryWidget(QWidget *parent) : QueryWidget(parent) {
 	this->comboBox = new QComboBox(this);
+    this->comboBox->setFocusPolicy(Qt::StrongFocus);
+    this->comboBox->installEventFilter(new EventGuard(this->comboBox)); //StrongFocus and event filter prevent the accidental change of comboBox value inside QScrollArea
 	this->label = new QLabel(this);
 	this->layout = new QHBoxLayout(this);
     this->layout->setMargin(0);
@@ -59,7 +61,11 @@ ComboBoxQueryWidget::~ComboBoxQueryWidget()
 {
 }
 
-void ComboBoxQueryWidget::handleResponse(QString initialQuery, QString response){
+QString ComboBoxQueryWidget::content() {
+    return this->name + ":" + "\t" + this->comboBox->currentText();
+}
+
+void ComboBoxQueryWidget::handleResponse(QString initialQuery, QString response) {
 	//check if response is not empty
 	if (!(response.size() > 2)) {
 		emit error(tr("Could not change value, response too short. Initial query: ") + initialQuery + tr(" Response: ") + response);

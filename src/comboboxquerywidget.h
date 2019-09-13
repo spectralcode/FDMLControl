@@ -33,6 +33,7 @@
 #include <QString>
 #include <QHBoxLayout>
 #include "querywidget.h"
+#include "eventguard.h"
 
 class ComboBoxQueryWidget : public QueryWidget
 {
@@ -42,6 +43,8 @@ public:
 	ComboBoxQueryWidget(QWidget *parent = nullptr);
 	ComboBoxQueryWidget(QString name, QStringList options, bool expert, QString infoText, QWidget *parent = nullptr);
 	~ComboBoxQueryWidget();	
+    QString content() override;
+
 
 private:
 	QComboBox* comboBox;
@@ -50,10 +53,12 @@ private:
 	QStringList options;
 	bool enableDisableComboBox;
 
+
 public slots:
 	void handleResponse(QString initialQuery, QString response) override;
 	void changeValue(int value);
 	void queryCurrentValue();
+
 
 signals:
 
